@@ -1,21 +1,9 @@
-import { useState } from "react";
 import benefits from "./utilities/benefits";
+import { useInteractiveComponent } from "./hooks/useInteractiveComponent";
 
 function App() {
-    const [amount, setAmount] = useState(8);
-  const [monthlyBill, setMonthlyBill] = useState(true);
 
-  let views;
-
-  if (amount >= 8) views = 10;
-  if (amount >= 12) views = 50;
-  if (amount >= 16) views = 100;
-  if (amount >= 24) views = 500;
-  if (amount >= 36) views = 1;
-
-  const finalAmount = monthlyBill ? amount : amount * 0.75;
-
-  const handleBillToggle = () => setMonthlyBill((prev) => !prev);
+  const {amount, setAmount, monthlyBill, views, finalAmount, handleBillToggle} = useInteractiveComponent();
 
   return (
     <main className="h-screen w-screen relative flex flex-col items-center">
@@ -31,7 +19,7 @@ function App() {
           <h1 className="text-[hsl(227,35%,25%)] text-2xl font-bold">Simple, traffic-based pricing</h1>
           <p className="text-[hsl(225,20%,60%)]">sign-up for our 30-day trial. No credit card required.</p>
         </div>
-        <div className="bg-[hsl(0,0%,100%)] rounded-md shadow-lg shadow-gray-400 z-10">
+        <div className="bg-[hsl(0,0%,100%)] rounded-lg shadow-lg shadow-gray-400 z-10">
           {/* First part of the second div */}
 
           <div className="py-8 flex flex-col gap-4 px-8">
