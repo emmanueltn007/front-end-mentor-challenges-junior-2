@@ -50,7 +50,7 @@ function App() {
               <button onClick={handleBillToggle}>
                 {monthlyBill ? (
                   <svg
-                    className="h-12 cursor-pointer"
+                    className="h-12 cursor-pointer hover:text-[hsl(174,77%,80%)] transition duration-300 ease-in-out"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 640"
                   >
@@ -61,7 +61,7 @@ function App() {
                   </svg>
                 ) : (
                   <svg
-                    className="h-12 cursor-pointer text-red-500"
+                    className="h-12 cursor-pointer text-[hsl(174,86%,45%)] hover:text-[hsl(174,77%,80%)] transition duration-300 ease-in-out"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 640"
                   >
