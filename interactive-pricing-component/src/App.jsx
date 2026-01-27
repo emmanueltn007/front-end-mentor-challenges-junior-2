@@ -26,7 +26,15 @@ function App() {
             <h2 className="text-[hsl(225,20%,60%)] text-center font-semibold">
               {views} {amount >= 36 ? "M" : "K"} PAGEVIEWS
             </h2>
-            <input className="border-none" min="8" max="36" type="range" value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
+            <input className="border-none" min="8" max="36" type="range" value={amount} onChange={(e) => setAmount(Number(e.target.value))} 
+              style={{
+                background: `linear-gradient(to right, 
+                black 0%,
+                black ${amount}%,
+                #e5e8eb ${amount}%,
+                #e5e7eb 100%)`
+              }}
+            />
             <p className="text-center text-3xl font-bold">
               ${finalAmount.toFixed(2)}{" "}
               <span className="text-[hsl(225,20%,60%)] text-xl font-semibold">
