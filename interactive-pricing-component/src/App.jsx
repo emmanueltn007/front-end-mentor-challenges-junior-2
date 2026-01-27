@@ -2,9 +2,20 @@ import { useState } from "react";
 import benefits from "./utilities/benefits";
 
 function App() {
-  const [isMonthlyBill, setIsMonthlyBill] = useState(true);
+    const [amount, setAmount] = useState(8);
+  const [monthlyBill, setMonthlyBill] = useState(true);
 
-  const handleBillToggle = () => setIsMonthlyBill((prev) => !prev);
+  let views;
+
+  if (amount >= 8) views = 10;
+  if (amount >= 12) views = 50;
+  if (amount >= 16) views = 100;
+  if (amount >= 24) views = 500;
+  if (amount >= 36) views = 1;
+
+  const finalAmount = monthlyBill ? amount : amount * 0.75;
+
+  const handleBillToggle = () => setMonthlyBill((prev) => !prev);
 
   return (
     <main className="h-screen w-screen relative flex flex-col items-center">
@@ -16,28 +27,28 @@ function App() {
         />
       </div>
       <div>
-        <div className="z-10 my-16">
-          <h1>Simple, traffic-based pricing</h1>
-          <p>sign-up for our 30-day trial. No credit card required.</p>
+        <div className="z-10 my-16 text-center bg-[url('/images/pattern-circles.svg')] bg-center bg-contain bg-no-repeat">
+          <h1 className="text-[hsl(227,35%,25%)] text-2xl font-bold">Simple, traffic-based pricing</h1>
+          <p className="text-[hsl(225,20%,60%)]">sign-up for our 30-day trial. No credit card required.</p>
         </div>
         <div className="bg-[hsl(0,0%,100%)] rounded-md shadow-lg shadow-gray-400 z-10">
           {/* First part of the second div */}
 
           <div className="py-8 flex flex-col gap-4 px-8">
             <h2 className="text-[hsl(225,20%,60%)] text-center font-semibold">
-              100K PAGEVIEWS
+              {views} {amount >= 36 ? "M" : "K"} PAGEVIEWS
             </h2>
-            <input className="border-none" type="range" />
+            <input className="border-none" min="8" max="36" type="range" value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
             <p className="text-center text-3xl font-bold">
-              $16.00{" "}
+              ${finalAmount.toFixed(2)}{" "}
               <span className="text-[hsl(225,20%,60%)] text-xl font-semibold">
-                /month
+                /{monthlyBill ? "month" : "year"}
               </span>
             </p>
             <div className="text-[hsl(225,20%,60%)] font-semibold flex items-center gap-4 mx-auto">
               <span>Monthly Billing</span>
               <button onClick={handleBillToggle}>
-                {isMonthlyBill ? (
+                {monthlyBill ? (
                   <svg
                     className="h-12 cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
