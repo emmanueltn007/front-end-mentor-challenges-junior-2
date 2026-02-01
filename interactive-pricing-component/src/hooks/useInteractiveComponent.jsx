@@ -18,6 +18,12 @@ export function useInteractiveComponent() {
 
   const handleBillToggle = () => setMonthlyBill((prev) => !prev);
 
+  const min = 8;
+
+  const max = 36;
+
+  const percent = ((amount - min) / (max -min)) * 100;
+
   return {
     amount,
     setAmount,
@@ -25,6 +31,9 @@ export function useInteractiveComponent() {
     setMonthlyBill,
     views,
     finalAmount,
-    handleBillToggle
+    handleBillToggle,
+    min,
+    max,
+    percent
   };
 }
