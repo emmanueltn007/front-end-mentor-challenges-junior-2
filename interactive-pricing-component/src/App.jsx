@@ -5,6 +5,12 @@ function App() {
 
   const {amount, setAmount, monthlyBill, views, finalAmount, handleBillToggle} = useInteractiveComponent();
 
+  const min = 8;
+
+  const max = 36;
+
+  const percent = ((amount - min) / (max -min)) * 100;
+
   return (
     <main className="h-screen w-screen relative flex flex-col items-center">
       <div className="h-[60vh] w-screen absolute -z-10">
@@ -28,18 +34,16 @@ function App() {
             </h2>
             <input 
               className="border-none" 
-              min="8" 
-              max="36" 
+              min={min}
+              max={max}
               type="range" 
               value={amount} 
-              onChange={(e) => {
-                  const val = Number(e.target.value);
-                  setAmount(val);
-
-                  const percent = (val / 100) * 100;
-                  e.target.style.setProperty("--value", `${percent}%`);
+              onChange={(e) => {setAmount(Number(e.target.value));
                 }
               }
+              style={{
+                "--value": `${percent}%`,
+              }}
             />
             <p className="text-center text-3xl font-bold">
               ${finalAmount.toFixed(2)}{" "}
