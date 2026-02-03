@@ -34,11 +34,9 @@ input[type="range"]::-moz-range-thumb {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background-image: url('/images/icon-slider.svg');
-    background-color: hsl(174, 86%, 45%);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: hsl(174, 86%, 45%) url('/images/icon-slider.svg') center no-repeat;
     border: none;
+    box-shadow: 5px 10px 15px 1px hsl(174, 86%, 45%);
 }
 
 input[type="range"]::-moz-range-track {
@@ -51,4 +49,11 @@ input[type="range"]::-moz-range-progress {
     background: hsl(174, 77%, 80%);
     height: 10px;
     border-radius: 30px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: hsl(174, 68%, 71%) url('/images/icon-slider.svg') center no-repeat;
 }

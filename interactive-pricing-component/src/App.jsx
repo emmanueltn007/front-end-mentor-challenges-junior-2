@@ -36,7 +36,10 @@ function App() {
               min={min} max={max} 
               percent={percent} 
             />
-            <BillingTypeToggle handleBillToggle={handleBillToggle} monthlyBill={monthlyBill}  />
+            <BillingTypeToggle 
+              handleBillToggle={handleBillToggle} 
+              monthlyBill={monthlyBill} 
+            />
           </div>
 
           <hr className="bg-[hsl(225,20%,60%)] h-0.5 border-none" />
