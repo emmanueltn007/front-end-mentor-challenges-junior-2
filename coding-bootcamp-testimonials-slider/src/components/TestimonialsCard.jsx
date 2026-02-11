@@ -1,24 +1,8 @@
 import { useState } from "react";
+import customerData from "../utilities/customerData"
 
 function TestimonialsCard() {
   const [currentTestimony, setCurrentTestimony] = useState(0);
-
-  const customerData = [
-    {
-      name: "Tanya Sinclair",
-      image: "/images/image-tanya.jpg",
-      occupation: "UX Engineer",
-      testimonialMessage:
-        "I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future.",
-    },
-    {
-      name: "John Tarkpor",
-      image: "/images/image-john.jpg",
-      occupation: "Junior Front-end Developer",
-      testimonialMessage:
-        "If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer.",
-    },
-  ];
 
   const handleNext = () =>
     setCurrentTestimony(
@@ -35,21 +19,34 @@ function TestimonialsCard() {
 
   return (
     <main>
-      <div>
-        <img src={currentCustomer.image} alt="customer image" />
-        <div>
-          <button onClick={handlePrev}>
+      <div className="relative">
+        <img
+          className="p-16"
+          src={currentCustomer.image}
+          alt={currentCustomer.name}
+        />
+        <div className="bg-[hsl(0,0%,100%)] absolute bottom-16 left-1/2 -translate-x-1/2 translate-y-1/2 shadow-md shadow-[hsl(240,18%,77%)] px-6 pb-2 pt-2 rounded-3xl flex gap-8">
+          <button className="cursor-pointer" onClick={handlePrev}>
             <img src="/images/icon-prev.svg" alt="previous icon" />
           </button>
-          <button onClick={handleNext}>
+          <button className="cursor-pointer" onClick={handleNext}>
             <img src="/images/icon-next.svg" alt="next icon" />
           </button>
         </div>
       </div>
-      <div>
-        <p>{currentCustomer.testimonialMessage}</p>
-        <span>{currentCustomer.name}</span>
-        <span>{currentCustomer.occupation}</span>
+      <div className="px-8 text-center flex flex-col gap-4">
+        <p className="text-[hsl(240,38%,20%)]">
+          " {currentCustomer.testimonialMessage} "
+        </p>
+        <div>
+          <span className="text-[hsl(240,38%,20%)] font-bold">
+            {currentCustomer.name}
+          </span>
+          <br />
+          <span className="text-[hsl(240,18%,77%)] font-bold">
+            {currentCustomer.occupation}
+          </span>
+        </div>
       </div>
     </main>
   );
