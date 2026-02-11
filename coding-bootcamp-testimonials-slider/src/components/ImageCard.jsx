@@ -1,7 +1,10 @@
 function ImageCard({ handleNext, handlePrev, currentCustomer }) {
 
   return (
-    <div className="relative max-w-md w-full">
+    <div className="relative max-w-md w-full z-50">
+      <div className="absolute -z-5">
+        <img src="/images/pattern-bg.svg" alt="background pattern" />
+      </div>
       <img
         className="w-full h-auto max-md:p-16"
         src={currentCustomer.image}
