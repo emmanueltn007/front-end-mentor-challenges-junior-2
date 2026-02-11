@@ -2,11 +2,11 @@ import { useInteractiveComponent } from "./hooks/useInteractiveComponent";
 import Benefits from "./components/Benefits";
 import BillingTypeToggle from "./components/BillingTypeToggle";
 import Intro from "./components/Intro";
-import BillingPlan from "./components/billingPlan";
+import BillingPlan from "./components/BillingPlan";
 
 function App() {
 
-  const { amount, setAmount, monthlyBill, views, finalAmount, handleBillToggle, min, max, percent } = useInteractiveComponent();
+  const { amount, setAmount, isReduced, views, finalAmount, handleBillToggle, min, max, percent } = useInteractiveComponent();
 
   return (
     <main className="h-screen w-screen relative flex flex-col items-center">
@@ -30,7 +30,7 @@ function App() {
             <BillingPlan 
               amount={amount} 
               setAmount={setAmount} 
-              monthlyBill={monthlyBill} 
+              isReduced={isReduced} 
               views={views}
               finalAmount={finalAmount}
               min={min} max={max} 
@@ -38,7 +38,7 @@ function App() {
             />
             <BillingTypeToggle 
               handleBillToggle={handleBillToggle} 
-              monthlyBill={monthlyBill} 
+              isReduced={isReduced} 
             />
           </div>
 

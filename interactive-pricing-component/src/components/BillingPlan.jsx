@@ -2,7 +2,7 @@ function BillingPlan({
   amount,
   setAmount,
   finalAmount,
-  monthlyBill,
+  isReduced,
   views,
   min,
   max,
@@ -12,12 +12,12 @@ function BillingPlan({
     <div className="flex flex-col gap-8">
       <div className="md:flex md:justify-between md:items-center">
         <h2 className="text-[hsl(225,20%,60%)] text-center font-semibold">
-          {views} {amount >= 36 ? "M" : "K"} PAGEVIEWS
+          {views} PAGEVIEWS
         </h2>
         <p className="text-center text-3xl font-bold max-md:hidden flex items-center gap-1">
           ${finalAmount.toFixed(2)}{" "}
           <span className="text-[hsl(225,20%,60%)] text-xl font-semibold">
-            /{monthlyBill ? "month" : "year"}
+            /{isReduced ? "month" : "year"}
           </span>
         </p>
       </div>
@@ -37,7 +37,7 @@ function BillingPlan({
       <p className="text-center text-3xl font-bold md:hidden flex justify-center items-center gap-1">
         ${finalAmount.toFixed(2)}{" "}
         <span className="text-[hsl(225,20%,60%)] text-xl font-semibold">
-          /{monthlyBill ? "month" : "year"}
+          /{isReduced ? "month" : "year"}
         </span>
       </p>
     </div>

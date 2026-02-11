@@ -1,9 +1,9 @@
-function BillingTypeToggle({ monthlyBill, handleBillToggle }) {
+function BillingTypeToggle({ isReduced, handleBillToggle }) {
   return (
     <div className="text-[hsl(225,20%,60%)] font-semibold flex items-center gap-4 mx-auto">
       <span>Monthly Billing</span>
       <button onClick={handleBillToggle}>
-        {monthlyBill ? (
+        {isReduced ? (
           <svg
             className="h-12 cursor-pointer hover:text-[hsl(174,77%,80%)] transition duration-300 ease-in-out"
             xmlns="http://www.w3.org/2000/svg"
