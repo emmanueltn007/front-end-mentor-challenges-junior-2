@@ -1,15 +1,16 @@
 function Header({ isDarkMode, handleDarkModeToggle }) {
   return (
-    <header className="flex flex-col md:flex-row md:justify-between">
+    <header className="flex flex-col md:flex-row md:justify-between z-50">
       <div>
-        <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
+        <h1 className={`text-3xl font-bold ${isDarkMode ? "text-[hsl(0,100%,100%)]" : ""}`}>Social Media Dashboard</h1>
+        <p className="text-[hsl(228,12%,44%)] font-bold">Total Followers: 23,004</p>
       </div>
-      <div className="flex items-center">
-        <p>Dark Mode</p>
+      <hr className="md:hidden border-t-2 border-[hsl(228,12%,44%)]" />
+      <div className="flex items-center max-md:justify-between">
+        <p className="text-[hsl(228,12%,44%)] font-bold">Dark Mode</p>
         <button
           onClick={handleDarkModeToggle}
-          className="cursor-pointer text-yellow-500"
+          className={`cursor-pointer ${isDarkMode ? "text-green-500" : "text-[hsl(230,22%,74%)]"}`}
           aria-label="Dark mode switch"
         >
           {isDarkMode ? (
