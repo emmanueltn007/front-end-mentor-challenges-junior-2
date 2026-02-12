@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
+import SocialMediaOverview from "./components/SocialMediaOverview";
 
 function App () {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -16,6 +17,7 @@ function App () {
       )
      }
      <Header isDarkMode={isDarkMode} handleDarkModeToggle={handleDarkModeToggle} />
+     <SocialMediaOverview />
     </div>
   );
 }
