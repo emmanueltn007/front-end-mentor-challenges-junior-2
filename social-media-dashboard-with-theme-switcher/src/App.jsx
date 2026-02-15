@@ -12,13 +12,13 @@ function App () {
 
 
   return (
-    <div className={`h-screen px-4 py-8 md:px-16 relative ${isDarkMode ? "bg-[hsl(230,17%,14%)]" : ""}`}>
+    <div className={`min-h-screen px-4 py-8 md:px-16 relative flex flex-col gap-4 ${isDarkMode ? "bg-[hsl(230,17%,14%)]" : ""}`}>
      {/*isDarkMode && (
         <div className="absolute h-2/5 w-screen bg-[hsl(232,19%,100%)] -z-50 rounded-b-3xl"></div>
       )
      */}
      <Header isDarkMode={isDarkMode} handleDarkModeToggle={handleDarkModeToggle} />
-     <SocialMediaOverview />
+     <SocialMediaOverview isDarkMode={isDarkMode} />
      <SocialMediaOverviewToday />
     </div>
   );
