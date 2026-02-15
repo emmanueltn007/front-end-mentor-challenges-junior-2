@@ -1,6 +1,6 @@
 function Header({ isDarkMode, handleDarkModeToggle }) {
   return (
-    <header className="flex flex-col md:flex-row md:justify-between z-50">
+    <header className="flex flex-col md:flex-row md:justify-between z-100">
       <div>
         <h1 className={`text-3xl font-bold ${isDarkMode ? "text-[hsl(0,100%,100%)]" : ""}`}>Social Media Dashboard</h1>
         <p className="text-[hsl(228,12%,44%)] font-bold">Total Followers: 23,004</p>

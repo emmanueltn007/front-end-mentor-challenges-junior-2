@@ -11,7 +11,8 @@ const data = [
         noOfViews: 87,
         percentageViews: 3,
         noOfLikes: 52,
-        percentageLikes: 2
+        percentageLikes: 2,
+        gradient: "linear-gradient(45deg,hsl(208,92%,53%),hsl(208,92%,53%))"
     },
     {
         social: "twitter",
@@ -25,7 +26,8 @@ const data = [
         noOfViews: 117,
         percentageViews: 303,
         noOfLikes: 507,
-        percentageLikes: 553
+        percentageLikes: 553,
+        gradient: "linear-gradient(45deg,hsl(203,89%,53%),hsl(203,89%,53%))"
     },{
         social: "instagram",
         socialIcon: "/images/icon-instagram.svg",
@@ -38,7 +40,8 @@ const data = [
         noOfViews: 52 + "K",
         percentageViews: 1375,
         noOfLikes: 5462,
-        percentageLikes: 2257
+        percentageLikes: 2257,
+        gradient: "linear-gradient(45deg,hsl(37,97%,70%),hsl(5,77%,71%),hsl(329,70%,58%))"
     },{
         social: "youtube",
         socialIcon: "/images/icon-youtube.svg",
@@ -51,7 +54,8 @@ const data = [
         noOfViews: 1407,
         percentageViews: 12,
         noOfLikes: 107,
-        percentageLikes: 19
+        percentageLikes: 19,
+        gradient: "linear-gradient(45deg,hsl(348,97%,39%),hsl(348,97%,39%))"
     }
 ];
 
