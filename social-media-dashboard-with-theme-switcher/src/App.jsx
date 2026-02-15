@@ -12,11 +12,11 @@ function App () {
 
 
   return (
-    <div className="relative">
-     {isDarkMode && (
-        <div className="absolute h-2/5 w-screen bg-[hsl(230,17%,14%)] -z-50 rounded-b-3xl"></div>
+    <div className={`h-screen px-4 py-8 md:px-16 relative ${isDarkMode ? "bg-[hsl(230,17%,14%)]" : ""}`}>
+     {/*isDarkMode && (
+        <div className="absolute h-2/5 w-screen bg-[hsl(232,19%,100%)] -z-50 rounded-b-3xl"></div>
       )
-     }
+     */}
      <Header isDarkMode={isDarkMode} handleDarkModeToggle={handleDarkModeToggle} />
      <SocialMediaOverview />
      <SocialMediaOverviewToday />

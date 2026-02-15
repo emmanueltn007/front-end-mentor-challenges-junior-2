@@ -4,21 +4,21 @@ function SocialMediaOverview () {
     console.log(data);
 
     return (
-        <section className="grid grid-cols-1 md:grid-cols-4">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {data.map((social) => {
                 return (
                     <div
-                        className="bg-[hsl(227,47%,96%)]"
+                        className="bg-[hsl(227,47%,96%)] rounded-md flex flex-col items-center gap-4 text-center py-4"
                         key={social.social}>
-                        <div className="flex">
+                        <div className="flex gap-4">
                             <img src={social.socialIcon} alt={`${social.social} icon`} />
-                            <span>{social.userSocialHandle}</span>
+                            <span className="text-[hsl(228,12%,44%)] font-bold">{social.userSocialHandle}</span>
                         </div>
                         <div className="flex flex-col">
-                            <span>{social.noOfFollowers}</span>
-                            <span>{social.followerType}</span>
+                            <span className="text-3xl font-bold">{social.noOfFollowers}</span>
+                            <span className="uppercase tracking-[0.25rem] text-[hsl(228,12%,44%)]">{social.followerType}</span>
                         </div>
-                        <div>
+                        <div className="flex items-center gap-2 font-semibold">
                             <img src={social.upOrDownIcon} alt="Up or down icon" />
                             <span>{social.followersGainedOrLostToday}</span>
                             <span>Today</span>
