@@ -3,7 +3,7 @@ import data from "../data/data"
 function SocialMediaOverview ({ isDarkMode }) {
 
     return (
-        <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-4 z-100">
             {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upOrDownIcon, followersGainedOrLostToday, gradient }) => {
                 return (
                     <div

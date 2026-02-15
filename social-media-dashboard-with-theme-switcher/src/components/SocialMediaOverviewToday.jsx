@@ -2,7 +2,7 @@ import data from "../data/data"
 
 function SocialMediaOverviewToday ({ isDarkMode }) {
     return (
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col gap-4 z-100">
             <h2 className={`font-bold text-2xl transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(228,12%,44%)]"}`}>
                 Overview - Today
             </h2>
