@@ -19,7 +19,7 @@ function App () {
      */}
      <Header isDarkMode={isDarkMode} handleDarkModeToggle={handleDarkModeToggle} />
      <SocialMediaOverview isDarkMode={isDarkMode} />
-     <SocialMediaOverviewToday />
+     <SocialMediaOverviewToday isDarkMode={isDarkMode} />
     </div>
   );
 }

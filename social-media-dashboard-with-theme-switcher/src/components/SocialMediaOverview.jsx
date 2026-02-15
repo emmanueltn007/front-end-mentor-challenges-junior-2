@@ -15,7 +15,7 @@ function SocialMediaOverview ({ isDarkMode }) {
                             <span className={`font-bold ${isDarkMode ? "text-[hsl(230,22%,74%)]" : "text-[hsl(228,12%,44%)]"}`}>{social.userSocialHandle}</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className={`text-3xl font-bold ${isDarkMode ? "text-[hsl(0,100%,100%)]" : ""}`}>{social.noOfFollowers}</span>
+                            <span className={`text-5xl font-bold ${isDarkMode ? "text-[hsl(0,100%,100%)]" : ""}`}>{social.noOfFollowers}</span>
                             <span className="uppercase tracking-[0.25rem] text-[hsl(228,12%,44%)]">{social.followerType}</span>
                         </div>
                         <div className="flex items-center gap-2 font-semibold">
