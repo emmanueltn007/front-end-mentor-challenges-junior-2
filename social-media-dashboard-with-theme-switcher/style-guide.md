@@ -23,7 +23,7 @@ The designs were created to the following widths:
 
 #### Dark Theme
 
-- Linear gradient (Toggle): hsl(210, 79%, 56%) to hsl(146, 68%, 55%)
+- Linear gradient (Toggle): hsl(210,79%,56%) to hsl(146,68%,55%)
 
 #### Light Theme
 

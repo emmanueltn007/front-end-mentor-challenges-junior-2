@@ -2,12 +2,12 @@ function ThemeToggleButton({ handleDarkModeToggle, isDarkMode }) {
   return (
     <button
       onClick={handleDarkModeToggle}
-      className={`cursor-pointer ${isDarkMode ? "text-gradient-to-r-to-hsl(0,50%,100%)-from-hsl(45,78%,45%)" : "text-[hsl(230,22%,74%)]"}`}
+      className={`cursor-pointer ${isDarkMode ? "" : ""}`}
       aria-label="Dark mode toggle button"
     >
       {isDarkMode ? (
         <svg
-          className="w-16"
+          className="w-16 text-[hsl(0,80%,86%)]"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 640"
         >
@@ -18,7 +18,7 @@ function ThemeToggleButton({ handleDarkModeToggle, isDarkMode }) {
         </svg>
       ) : (
         <svg
-          className="w-16"
+          className="w-16 text-[hsl(230,22%,74%)]"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 640"
         >
