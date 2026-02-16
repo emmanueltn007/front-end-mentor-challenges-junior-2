@@ -1,10 +1,10 @@
-import data from "../data/data"
+import data from "../data/overviewData"
 
 function SocialMediaOverview ({ isDarkMode }) {
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-4 z-100">
-            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upOrDownIcon, followersGainedOrLostToday, gradient }) => {
+            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday, gradient }) => {
                 return (
                     <div
                         className={`
@@ -16,12 +16,12 @@ function SocialMediaOverview ({ isDarkMode }) {
                             <span className={`font-bold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(230,22%,74%)]" : "text-[hsl(228,12%,44%)]"}`}>{userSocialHandle}</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className={`text-5xl font-bold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : ""}`}>{noOfFollowers}</span>
+                            <span className={`text-5xl font-bold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(230,17%,14%)]"}`}>{noOfFollowers}</span>
                             <span className="uppercase tracking-[0.25rem] text-[hsl(228,12%,44%)]">{followerType}</span>
                         </div>
-                        <div className="flex items-center gap-2 font-semibold">
-                            <img src={upOrDownIcon} alt="Up or down icon" />
-                            <span>{followersGainedOrLostToday}</span>
+                        <div className={`flex items-center gap-2 font-semibold ${followersGainedOrLostToday < 0 ? "text-[hsl(356,69%,56%)]" : "text-[hsl(163,72%,41%)]"}`}>
+                            <img src={followersGainedOrLostToday < 0 ? downIcon : upIcon} alt="Up or down icon" />
+                            <span>{followersGainedOrLostToday < 0 ? followersGainedOrLostToday * - 1 : followersGainedOrLostToday}</span>
                             <span>Today</span>
                         </div>
                     </div>

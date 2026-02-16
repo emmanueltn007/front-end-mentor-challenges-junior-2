@@ -1,4 +1,4 @@
-const data = [
+const overviewData = [
     {
         social: "facebook",
         socialIcon: "/images/icon-facebook.svg",
@@ -6,7 +6,8 @@ const data = [
         noOfFollowers: 1987,
         followerType: "followers",
         followersGainedOrLostToday: 12,
-        upOrDownIcon: "/images/icon-up.svg",
+        upIcon: "/images/icon-up.svg",
+        downIcon: "/images/icon-down.svg",
         viewType: "Page Views",
         noOfViews: 87,
         percentageViews: 3,
@@ -21,7 +22,8 @@ const data = [
         noOfFollowers: 1044,
         followerType: "followers",
         followersGainedOrLostToday: 99,
-        upOrDownIcon: "/images/icon-up.svg",
+        upIcon: "/images/icon-up.svg",
+        downIcon: "/images/icon-down.svg",
         viewType: "Retweets",
         noOfViews: 117,
         percentageViews: 303,
@@ -35,7 +37,8 @@ const data = [
         noOfFollowers: 11 + "K",
         followerType: "followers",
         followersGainedOrLostToday: 1099,
-        upOrDownIcon: "/images/icon-up.svg",
+        upIcon: "/images/icon-up.svg",
+        downIcon: "/images/icon-down.svg",
         viewType: "Profile Views",
         noOfViews: 52 + "K",
         percentageViews: 1375,
@@ -49,7 +52,8 @@ const data = [
         noOfFollowers: 8239,
         followerType: "subscribers",
         followersGainedOrLostToday: -144,
-        upOrDownIcon: "/images/icon-down.svg",
+        upIcon: "/images/icon-up.svg",
+        downIcon: "/images/icon-down.svg",
         viewType: "Total Views",
         noOfViews: 1407,
         percentageViews: 12,
@@ -59,4 +63,4 @@ const data = [
     }
 ];
 
-export default data
+export default overviewData
