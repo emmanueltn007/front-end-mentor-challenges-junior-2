@@ -18,7 +18,7 @@ The designs were created to the following widths:
 
 - Blue 600 (Facebook): hsl(208, 92%, 53%)
 - Blue 500 (Twitter): hsl(203, 89%, 53%)
-- Linear gradient (Instagram): hsl(37, 97%, 70%) to hsl(5, 77%, 71%) to hsl(329, 70%, 58%)
+- Linear gradient (Instagram): hsl(37,97%,70%) to hsl(5,77%,71%) to hsl(329,70%,58%)
 - Red 700 (YouTube): hsl(348, 97%, 39%)
 
 #### Dark Theme
@@ -27,7 +27,7 @@ The designs were created to the following widths:
 
 #### Light Theme
 
-- Gray 400 (Toggle): hsl(230, 22%, 74%)
+- Gray 400 (Toggle): hsl(230,22%,74%)
 
 ### Neutral
 

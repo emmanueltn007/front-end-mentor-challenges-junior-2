@@ -4,11 +4,11 @@ function SocialMediaOverview ({ isDarkMode }) {
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-4 z-100">
-            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday, gradient }) => {
+            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday, backgroundColor }) => {
                 return (
                     <div
                         className={`
-                            overflow-hidden relative before:content-[''] before:absolute before:top-0 before:h-4 before:w-full before:bg-[linear-gradient(${gradient})]
+                            overflow-hidden relative before:content-[''] before:absolute before:top-0 before:h-4 before:w-full before:${backgroundColor}
                             rounded-md flex flex-col items-center gap-4 text-center py-4 transition-all duration-300 ease-in-out ${isDarkMode ? "bg-[hsl(228,28%,20%)]" : "bg-[hsl(227,47%,96%)]"}`}
                         key={social}>
                         <div className="flex gap-4">

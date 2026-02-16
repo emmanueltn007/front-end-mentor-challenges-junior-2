@@ -7,7 +7,7 @@ function ThemeToggleButton({ handleDarkModeToggle, isDarkMode }) {
     >
       {isDarkMode ? (
         <svg
-          className="w-16 text-[hsl(0,80%,86%)]"
+          className="w-16 text-[linear-gradient(90deg,hsl(210,79%,56%),hsl(146,68%,55%))]"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 640"
         >
