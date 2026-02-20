@@ -66,7 +66,6 @@ h1 {
 /* Pricing Plan Cards */
 
 .pricing-plans-container {
-    background-color: ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +75,7 @@ h1 {
 .basic-card,
 .master-card, 
 .professional-card {
-    width: 100%;
+    width: 30%;
 }
 
 .professional-card {
