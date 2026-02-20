@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(240, 78%, 98%);
+    position: relative;
+}
+
+/* Background images */
+.bg-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: 300px;
+    z-index: -10;
+}
+
+.bg-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+/* Pricing Plan Toggle Switch */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+}
+
+h1 {
+    color: hsl(232, 13%, 33%);
+}
+
+.pricing-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.pricing-toggle-container > span {
+    color: hsl(233, 13%, 49%);
+    font-weight: bold;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button > .toggle-image {
+ width: 4em;
+ color: hsl(238, 63%, 64%);
+}
+
+/* Pricing Plan Cards */
+
+.pricing-plans-container {
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.basic-card,
+.master-card, 
+.professional-card {
+    width: 100%;
+}
+
+.professional-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-align: center;
+    background: linear-gradient(135deg,hsl(237, 73%, 79%),hsl(238, 63%, 64%));
+    padding: 2em 1em;
+    border-radius: 5px;
+}
+
+.basic-card,
+.master-card {
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.basic-card > h2,
+.master-card > h2 {
+    color: hsl(232, 13%, 33%);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2.5em;
+}
+
+.dollar-sign {
+    font-size: 1.25em;
+}
+
+.basic-card > button,
+.master-card > button {
+    border: none;
+    color: hsl(240, 78%, 98%);
+    font-weight: 400;
+    background: linear-gradient(45deg,hsl(237, 73%, 79%),hsl(238, 63%, 64%));
+    padding: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.professional-card > button {
+    border: none;
+    color: hsl(238, 63%, 64%);
+    font-weight: 400;
+    background: hsl(240, 78%, 98%);
+    padding: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
