@@ -73,35 +73,42 @@ h1 {
 }
 
 .basic-card,
-.master-card, 
-.professional-card {
+.professional-card,
+.master-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-align: center;
+    gap: 0.5em;
+    border-radius: 5px;
     width: 30%;
+    box-shadow: 0px 10px 10px 2px gray;
 }
 
 .professional-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    text-align: center;
     background: linear-gradient(135deg,hsl(237, 73%, 79%),hsl(238, 63%, 64%));
-    padding: 2em 1em;
-    border-radius: 5px;
+    padding: 2.5em 2em;
 }
 
 .basic-card,
 .master-card {
-    text-align: center;
     background-color: hsl(0, 0%, 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 5px;
-    padding: 1em;
+    padding: 2em;
+}
+
+.professional-card > h2,
+.basic-card > h2,
+.master-card > h2 {
+    font-size: 1.25em;
+}
+
+.professional-card > h2 {
+    color: hsl(240, 78%, 98%);
 }
 
 .basic-card > h2,
 .master-card > h2 {
-    color: hsl(232, 13%, 33%);
+    color: hsl(233, 13%, 49%);  
 }
 
 .professional-card > .price-container {
@@ -116,37 +123,79 @@ h1 {
     font-weight: bold;
 }
 
+.basic-card > .price-container,
+.master-card > .price-container {
+    color: hsl(232, 13%, 33%);
+}
+
 .price {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .dollar-sign {
-    font-size: 1.25em;
+    font-size: 2em;
+}
+
+.offers {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.basic-card > .offers ,
+.master-card > .offers,
+.professional-card > .offers {
+    font-weight: bold;
+    margin-bottom: 1em;
+} 
+
+.basic-card > .offers ,
+.master-card > .offers {
+    color: hsl(233, 13%, 49%);  
+}
+
+.professional-card > .offers {
+    color: hsl(240, 78%, 98%);
+}
+
+.basic-card > .offers > hr,
+.master-card > .offers > hr,
+.professional-card > .offers > hr {
+    border: none;
+    height: 2px;
+}
+
+.basic-card > .offers > hr,
+.master-card > .offers > hr {
+    background-color: rgb(212, 212, 212);
+}
+
+.professional-card > .offers > hr {
+    background-color: hsl(240, 78%, 98%);
+} 
+
+.basic-card > button,
+.master-card > button,
+.professional-card > button {
+    border: 1px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    padding: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.15s ease-in-out;
 }
 
 .basic-card > button,
 .master-card > button {
-    border: 1px solid transparent;
     color: hsl(240, 78%, 98%);
-    font-weight: 400;
     background: linear-gradient(45deg,hsl(237, 73%, 79%),hsl(238, 63%, 64%));
-    padding: 8px 0;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.15s ease-in-out;
 }
 
 .professional-card > button {
-    border: 1px solid transparent;
     color: hsl(238, 63%, 64%);
-    font-weight: 400;
     background: hsl(240, 78%, 98%);
-    padding: 8px 0;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.15s ease-in-out;
 }
 
 .basic-card > button:hover,
@@ -160,4 +209,31 @@ h1 {
     color: hsl(0, 0%, 100%);
     border: 1px solid hsl(0, 0%, 100%);
     background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    /* Background images */
+    .bg-bottom {
+        display: none;
+    }
+
+    /* Pricing Plan Cards */
+    .pricing-plans-container {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .basic-card,
+    .master-card, 
+    .professional-card {
+        width: 100%;
+    }
+
+    .professional-card {
+        padding: 2em;
+    }
+
+    .price {
+        font-size: 5em;
+    }
 }
