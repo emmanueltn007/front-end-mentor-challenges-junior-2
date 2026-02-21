@@ -104,6 +104,10 @@ h1 {
     color: hsl(232, 13%, 33%);
 }
 
+.professional-card > .price-container {
+    color: hsl(240, 78%, 98%);
+}
+
 .price-container {
     display: flex;
     align-items: center;
@@ -122,7 +126,7 @@ h1 {
 
 .basic-card > button,
 .master-card > button {
-    border: none;
+    border: 1px solid transparent;
     color: hsl(240, 78%, 98%);
     font-weight: 400;
     background: linear-gradient(45deg,hsl(237, 73%, 79%),hsl(238, 63%, 64%));
@@ -130,10 +134,11 @@ h1 {
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
+    transition: all 0.15s ease-in-out;
 }
 
 .professional-card > button {
-    border: none;
+    border: 1px solid transparent;
     color: hsl(238, 63%, 64%);
     font-weight: 400;
     background: hsl(240, 78%, 98%);
@@ -141,4 +146,18 @@ h1 {
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
+    transition: all 0.15s ease-in-out;
+}
+
+.basic-card > button:hover,
+.master-card > button:hover {
+    color: hsl(238, 63%, 64%);
+    border: 1px solid hsl(238, 63%, 64%);
+    background: transparent;
+}
+
+.professional-card > button:hover {
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    background: transparent;
 }
