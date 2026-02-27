@@ -1,11 +1,4 @@
-import { useState } from "react";
-
-function ToggleSection () {
-    const [isAnnually, setIsAnnually] = useState(false);
-
-    const handleToggleButton = () => {
-        setIsAnnually((prev) => !prev);
-    }
+function ToggleSection ({ isAnnually, handleToggleButton }) {
 
     return (
         <section className="flex flex-col items-center font-bold">
