@@ -1,8 +1,6 @@
-import { data } from "react-router";
-
 const packagesPlans = [
     {
-        id: 01,
+        id: "01",
         name: "Basic",
         annualPrice: 199.99,
         monthlyPrice: 19.99,
@@ -11,7 +9,7 @@ const packagesPlans = [
         data: "Send Up To 3 GB",
     },
     {
-        id: 02,
+        id: "02",
         name: "Professional",
         annualPrice: 249.99,
         monthlyPrice: 24.99,
@@ -20,7 +18,7 @@ const packagesPlans = [
         data: "Send Up To 10 GB" 
     },
     {
-        id: 03,
+        id: "03",
         name: "Master",
         annualPrice: 399.99,
         monthlyPrice: 39.99,
@@ -29,3 +27,5 @@ const packagesPlans = [
         data: "Send Up To 20 GB"
     }
 ];
+
+export default packagesPlans

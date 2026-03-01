@@ -15,7 +15,7 @@ function Card () {
                 isAnnually={isAnnually} 
                 handleToggleButton={handleToggleButton} 
             />
-            <PackagePlansCards />
+            <PackagePlansCards isAnnually={isAnnually} />
         </main>
     );
 }
