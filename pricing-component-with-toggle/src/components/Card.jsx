@@ -10,7 +10,7 @@ function Card () {
     }
 
     return (
-        <main className="bg-[hsl(240,78%,98%)] px-8">
+        <main className="px-8">
             <ToggleSection 
                 isAnnually={isAnnually} 
                 handleToggleButton={handleToggleButton} 
