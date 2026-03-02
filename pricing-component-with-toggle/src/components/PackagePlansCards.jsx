@@ -29,8 +29,8 @@ function PackagePlansCards ({ isAnnually }) {
                                 <button
                                     type="button" 
                                     className={`
-                                        cursor-pointer font-semibold py-2 w-full rounded-md
-                                        ${index === 1 ? "text-[hsl(238,63%,64%)] bg-[hsl(0,0%,100%)]" : "text-[hsl(0,0%,100%)] bg-[linear-gradient(135deg,hsl(237,73%,79%),hsl(238,63%,64%))]"}`
+                                        cursor-pointer font-semibold py-2 w-full rounded-md border-2 border-transparent transition-colors duration-300 ease-in-out
+                                        ${index === 1 ? "text-[hsl(238,63%,64%)] bg-[hsl(0,0%,100%)] hover:bg-transparent hover:text-[hsl(0,0%,100%)] hover:border-[hsl(0,0%,100%)]" : "text-[hsl(0,0%,100%)] bg-[linear-gradient(135deg,hsl(237,73%,79%),hsl(238,63%,64%))] hover:text-[hsl(238,63%,64%)] hover:border-[hsl(238,63%,64%)] hover:bg-[linear-gradient(135deg,hsl(0,0%,100%),hsl(0,0%,100%))]"}`
                                     }>
                                     LEARN MORE
                                 </button>
