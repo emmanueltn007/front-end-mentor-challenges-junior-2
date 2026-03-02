@@ -10,7 +10,7 @@ function Card () {
     }
 
     return (
-        <main className="px-8">
+        <main className="px-8 py-16">
             <ToggleSection 
                 isAnnually={isAnnually} 
                 handleToggleButton={handleToggleButton} 
