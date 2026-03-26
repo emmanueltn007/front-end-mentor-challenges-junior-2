@@ -4,14 +4,14 @@ import PriceDisplay from "./PriceDisplay";
 function PackagePlansCards ({ isAnnually }) {
 
     return (
-        <section className="flex justify-center max-md:gap-8 md:mx-32">
+        <section className="flex flex-col md:flex-row justify-center max-md:gap-8 md:mx-32">
                     {packagesPlans.map((plan, index) => {
                         const isFeatured = index === 1;
                         return (
                             <div 
                                 key={plan.name}
-                                className={`w-md rounded-md flex flex-col items-center text-center gap-8 shadow-lg shadow-gray-500
-                                    ${isFeatured ? "bg-[linear-gradient(135deg,hsl(237,73%,79%),hsl(238,63%,64%))] py-8 px-4" : "bg-[hsl(0,0%,100%)] p-4 self-center"}`}
+                                className={`w-full md:w-lg rounded-md flex flex-col items-center text-center gap-8 shadow-lg shadow-gray-500
+                                    ${isFeatured ? "bg-[linear-gradient(135deg,hsl(237,73%,79%),hsl(238,63%,64%))] md:py-8 py-4 px-4" : "bg-[hsl(0,0%,100%)] p-4 md:self-center"}`}
                             >
                                 <h2 className={`text-xl  font-semibold ${index === 1 ? "text-[hsl(0,0%,100%)]" : "text-[hsl(233,13%,49%)]"}`}>
                                     {plan.name}

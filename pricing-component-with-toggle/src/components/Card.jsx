@@ -10,7 +10,7 @@ function Card () {
     }
 
     return (
-        <main className="px-8 py-16">
+        <main className="flex flex-col gap-8 px-8 py-16">
             <ToggleSection 
                 isAnnually={isAnnually} 
                 handleToggleButton={handleToggleButton} 
