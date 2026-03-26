@@ -1,6 +1,6 @@
 import Card from "./components/Card";
 
-function App () {
+function App() {
   return (
     <div className="min-h-screen w-screen bg-[hsl(240,78%,98%)] font-['Montserrat',sans-serif]">
       <Card />
@@ -8,4 +8,4 @@ function App () {
   );
 }
 
-export default App
+export default App;

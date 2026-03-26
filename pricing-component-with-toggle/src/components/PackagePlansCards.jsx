@@ -4,7 +4,7 @@ import PriceDisplay from "./PriceDisplay";
 function PackagePlansCards ({ isAnnually }) {
 
     return (
-        <section className="flex flex-col md:flex-row justify-center max-md:gap-8 md:mx-32">
+        <section className="flex flex-col md:flex-row justify-center max-md:gap-8 md:mx-32 z-100">
                     {packagesPlans.map((plan, index) => {
                         const isFeatured = index === 1;
                         return (
