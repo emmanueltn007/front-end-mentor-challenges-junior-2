@@ -10,10 +10,10 @@ function PackagePlansCards ({ isAnnually }) {
                         return (
                             <div 
                                 key={plan.name}
-                                className={`w-full md:w-lg rounded-md flex flex-col items-center text-center gap-8 shadow-lg shadow-gray-500
+                                className={`w-full md:w-lg rounded-md flex flex-col items-center text-center gap-4 shadow-lg shadow-gray-500
                                     ${isFeatured ? "bg-[linear-gradient(135deg,hsl(237,73%,79%),hsl(238,63%,64%))] md:py-8 py-4 px-4" : "bg-[hsl(0,0%,100%)] p-4 md:self-center"}`}
                             >
-                                <h2 className={`text-xl  font-semibold ${index === 1 ? "text-[hsl(0,0%,100%)]" : "text-[hsl(233,13%,49%)]"}`}>
+                                <h2 className={`text-sm  font-semibold ${index === 1 ? "text-[hsl(0,0%,100%)]" : "text-[hsl(233,13%,49%)]"}`}>
                                     {plan.name}
                                 </h2>
 
