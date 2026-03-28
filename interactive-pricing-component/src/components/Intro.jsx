@@ -10,7 +10,7 @@ function Intro() {
       <h1 className="text-[hsl(227,35%,25%)] text-2xl font-bold">
         Simple, traffic-based pricing
       </h1>
-      <p className="text-[hsl(225,20%,60%)]">
+      <p className="text-[hsl(225,20%,60%)] max-md:px-16">
         sign-up for our 30-day trial. No credit card required.
       </p>
     </div>

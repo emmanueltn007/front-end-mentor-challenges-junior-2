@@ -6,7 +6,7 @@ import BillingPlan from "./components/BillingPlan";
 
 function App() {
 
-  const { amount, setAmount, isReduced, views, finalAmount, handleBillToggle, min, max, percent } = useInteractiveComponent();
+  const { tierIndex, setTierIndex, amount, isReduced, views, finalAmount, handleBillToggle, min, max, percent } = useInteractiveComponent();
 
   return (
     <main className="min-h-screen w-screen relative flex flex-col items-center font-['Manrope',sans-serif] max-md:px-4">
@@ -14,17 +14,17 @@ function App() {
       {/* Background Image */}
       <div className="h-1/2 w-screen absolute -z-10 bg-[hsl(225,100%,96%)] rounded-bl-[8rem]"></div>
 
-      <div className="max-md:w-full flex flex-col gap-16 my-auto">
+      <div className="max-md:w-full flex flex-col gap-24 md:gap-16 my-auto">
         <Intro />
-
 
         <div className="bg-[hsl(0,0%,100%)] rounded-lg shadow-lg shadow-gray-400 z-10">
 
           {/* First part of the second div */}
           <div className="py-8 flex flex-col gap-4 px-8">
             <BillingPlan 
+              tierIndex={tierIndex}
+              setTierIndex={setTierIndex}
               amount={amount} 
-              setAmount={setAmount} 
               isReduced={isReduced} 
               views={views}
               finalAmount={finalAmount}

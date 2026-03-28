@@ -1,6 +1,6 @@
 function BillingPlan({
-  amount,
-  setAmount,
+  tierIndex,
+  setTierIndex,
   finalAmount,
   isReduced,
   views,
@@ -25,10 +25,11 @@ function BillingPlan({
         className="border-none"
         min={min}
         max={max}
+        step={1}
         type="range"
-        value={amount}
+        value={tierIndex}
         onChange={(e) => {
-          setAmount(Number(e.target.value));
+          setTierIndex(Number(e.target.value));
         }}
         style={{
           "--value": `${percent}%`,
