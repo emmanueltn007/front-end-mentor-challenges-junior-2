@@ -12,13 +12,7 @@ function App() {
     <main className="min-h-screen w-screen relative flex flex-col items-center font-['Manrope',sans-serif] max-md:px-4">
 
       {/* Background Image */}
-      <div className="h-1/2 w-screen absolute -z-10">
-        <img
-          className="object-cover h-full w-full"
-          src="/images/bg-pattern.svg"
-          alt="background image"
-        />
-      </div>
+      <div className="h-1/2 w-screen absolute -z-10 bg-[hsl(225,100%,96%)] rounded-bl-[8rem]"></div>
 
       <div className="max-md:w-full flex flex-col gap-16 my-auto">
         <Intro />
