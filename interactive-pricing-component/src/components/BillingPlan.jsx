@@ -11,7 +11,7 @@ function BillingPlan({
   return (
     <div className="flex flex-col gap-8">
       <div className="md:flex md:justify-between md:items-center">
-        <h2 className="text-[hsl(225,20%,60%)] text-center font-semibold">
+        <h2 className="text-[hsl(225,20%,60%)] text-center font-bold">
           {views} PAGEVIEWS
         </h2>
         <p className="text-center text-3xl font-bold max-md:hidden flex items-center gap-1">

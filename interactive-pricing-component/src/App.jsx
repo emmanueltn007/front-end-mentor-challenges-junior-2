@@ -9,10 +9,10 @@ function App() {
   const { amount, setAmount, isReduced, views, finalAmount, handleBillToggle, min, max, percent } = useInteractiveComponent();
 
   return (
-    <main className="h-screen w-screen relative flex flex-col items-center">
+    <main className="min-h-screen w-screen relative flex flex-col items-center font-['Manrope',sans-serif] max-md:px-4">
 
       {/* Background Image */}
-      <div className="h-[60vh] w-screen absolute -z-10">
+      <div className="h-1/2 w-screen absolute -z-10">
         <img
           className="object-cover h-full w-full"
           src="/images/bg-pattern.svg"
@@ -20,8 +20,9 @@ function App() {
         />
       </div>
 
-      <div>
+      <div className="max-md:w-full flex flex-col gap-16 my-auto">
         <Intro />
+
 
         <div className="bg-[hsl(0,0%,100%)] rounded-lg shadow-lg shadow-gray-400 z-10">
 
