@@ -8,8 +8,6 @@ const TIERS = [
   {amount: 36, views: 1 + "M"}
 ];
 
-const DISCOUNT = 0.75
-
 export function useInteractiveComponent() {
 
   const [tierIndex, setTierIndex] = useState(2); // set the middle tier as the default
@@ -17,7 +15,9 @@ export function useInteractiveComponent() {
 
   const { amount, views } = TIERS[tierIndex];
 
-  const finalAmount = isReduced ? amount : amount * DISCOUNT;
+  const finalAmountMultiplier = 12 * 0.75
+
+  const finalAmount = isReduced ? amount : amount * finalAmountMultiplier;
 
   const handleBillToggle = () => setIsReduced((prev) => !prev);
 
