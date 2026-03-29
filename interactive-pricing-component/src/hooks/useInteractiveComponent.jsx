@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const TIERS = [
-  {amount: 8, views: 10},
-  {amount: 12, views: 50},
-  {amount: 16, views: 100},
-  {amount: 24, views: 500},
-  {amount: 36, views: 1000}
+  {amount: 8, views: 10 + "K"},
+  {amount: 12, views: 50 + "K"},
+  {amount: 16, views: 100 + "K"},
+  {amount: 24, views: 500 + "K"},
+  {amount: 36, views: 1 + "M"}
 ];
 
 const DISCOUNT = 0.75
