@@ -16,7 +16,9 @@ function Benefits() {
           );
         })}
       </ul>
-      <button className="bg-[hsl(227,35%,25%)] text-[hsl(226,100%,87%)] py-2 px-4 rounded-3xl font-semibold cursor-pointer border-2 border-transparent hover:text-[hsl(227,35%,25%)] hover:border-[hsl(227,35%,25%)] hover:bg-[hsl(0,0%,100%)] transition-all duration-300 ease-in-out">
+      <button
+        type="button"
+        className="bg-[hsl(227,35%,25%)] text-[hsl(226,100%,87%)] py-2 px-4 rounded-3xl font-semibold cursor-pointer border-2 border-transparent hover:text-[hsl(227,35%,25%)] hover:border-[hsl(227,35%,25%)] hover:bg-[hsl(0,0%,100%)] transition-all duration-300 ease-in-out">
         Start my trial
       </button>
     </div>
