@@ -1,22 +1,8 @@
-import { useEffect, useState } from "react";
+import useFade from "../hooks/useFade";
 
 function ImageCard({ handleNext, handlePrev, currentCustomer }) {
-  const [isVisible, setIsVisible] = useState(true);
-  const [displayedCustomer, setDisplayedCustomer] = useState(currentCustomer);
-
-  useEffect(() => {
-    setIsVisible(false); 
-
-    const timeout = setTimeout(() => {
-      setDisplayedCustomer(currentCustomer);
-      setIsVisible(true);
-    }, 500); 
-
-    return () => {
-      setIsVisible(false); // ensure clean state on fast clicks
-      clearTimeout(timeout);
-    }
-  }, [currentCustomer]);
+  const { isVisible, displayedCustomer } = useFade(currentCustomer);
+  
 
   return (
     <div className="relative max-w-md w-full z-50 max-md:mx-auto">
