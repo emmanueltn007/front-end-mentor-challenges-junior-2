@@ -1,14 +1,32 @@
+import { useEffect, useState } from "react";
+
 function ImageCard({ handleNext, handlePrev, currentCustomer }) {
+  const [isVisible, setIsVisible] = useState(true);
+  const [displayedCustomer, setDisplayedCustomer] = useState(currentCustomer);
+
+  useEffect(() => {
+    setIsVisible(false); 
+
+    const timeout = setTimeout(() => {
+      setDisplayedCustomer(currentCustomer);
+      setIsVisible(true);
+    }, 500); 
+
+    return () => {
+      setIsVisible(false); // ensure clean state on fast clicks
+      clearTimeout(timeout);
+    }
+  }, [currentCustomer]);
 
   return (
-    <div className="relative max-w-md w-full z-50">
+    <div className="relative max-w-md w-full z-50 max-md:mx-auto">
       <div className="absolute -z-5">
         <img src="/images/pattern-bg.svg" alt="background pattern" />
       </div>
       <img
-        className="w-full h-auto max-md:p-16"
-        src={currentCustomer.image}
-        alt={currentCustomer.name}
+        className={`w-full h-auto max-md:p-16 transition-opacity duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        src={displayedCustomer.image}
+        alt={displayedCustomer.name}
       />
       <div className="bg-[hsl(0,0%,100%)] absolute max-md:bottom-16 max-md:translate-y-1/2 md:-translate-y-1/2 md:left-16 max-md:left-1/2 max-md:-translate-x-1/2 shadow-md shadow-[hsl(240,18%,77%)] px-6 pb-2 pt-2 rounded-3xl flex gap-8">
         <button
