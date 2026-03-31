@@ -2,13 +2,10 @@ import useFade from "../hooks/useFade";
 
 function ImageCard({ handleNext, handlePrev, currentCustomer }) {
   const { isVisible, displayedCustomer } = useFade(currentCustomer);
-  
 
   return (
-    <div className="relative max-w-md w-full z-50 max-md:mx-auto">
-      <div className="absolute -z-5">
-        <img src="/images/pattern-bg.svg" alt="background pattern" />
-      </div>
+    <div className="relative max-w-md w-full z-50 max-md:mx-auto max-md:mb-8">
+
       <img
         className={`w-full h-auto max-md:p-16 transition-opacity duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}
         src={displayedCustomer.image}
