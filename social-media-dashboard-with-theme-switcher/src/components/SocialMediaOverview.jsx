@@ -4,7 +4,7 @@ function SocialMediaOverview ({ isDarkMode }) {
     const colors = ["hsl(208,92%,53%)", "hsl(203, 89%, 53%)", "linear-gradient(45deg,hsl(37,97%,70%),hsl(5,77%,71%),hsl(329,70%,58%))", "hsl(348,97%,39%)"]
 
     return (
-        <section className="grid grid-cols-1 md:grid-cols-4 gap-4 z-100">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-8 z-100">
             {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday }, index) => {
                 return (
                     <div
