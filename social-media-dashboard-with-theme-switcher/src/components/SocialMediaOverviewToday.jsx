@@ -1,6 +1,10 @@
 import overviewTodayData from "../data/overviewTodayData";
+import { useTheme } from "../hooks/ThemeContext";
 
-function SocialMediaOverviewToday({ isDarkMode }) {
+function SocialMediaOverviewToday() {
+  
+  const { isDarkMode } = useTheme();
+
   return (
     <section className="flex flex-col gap-4 z-100">
       <h2

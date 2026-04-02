@@ -1,4 +1,9 @@
-function ThemeToggleButton({ handleDarkModeToggle, isDarkMode }) {
+import { useTheme } from "../hooks/ThemeContext";
+
+function ThemeToggleButton() {
+  
+  const { isDarkMode, handleDarkModeToggle } = useTheme();
+
   return (
     <button
       onClick={handleDarkModeToggle}
