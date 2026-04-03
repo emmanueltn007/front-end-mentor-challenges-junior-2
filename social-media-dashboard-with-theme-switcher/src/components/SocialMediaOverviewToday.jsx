@@ -22,11 +22,11 @@ function SocialMediaOverviewToday() {
                   <img src={socialIcon} alt={`${social} icon`} />
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className={`text-2xl font-semibold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(230,17%,14%)]"}`}>{engagementNumber}</span>
+                  <span className={`text-2xl font-bold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(230,17%,14%)]"}`}>{engagementNumber}</span>
                   <div className="flex items-center gap-2">
                     <img src={engagementPercentage < 0 ? downIcon : upIcon} alt="up or down icon" />
                      <span className={`font-semibold ${engagementPercentage < 0 ? "text-[hsl(356,69%,56%)]" : "text-[hsl(163,72%,41%)]"}`}>
-                      {engagementPercentage < 0 ? engagementPercentage * - 1 : engagementPercentage}%
+                      {engagementPercentage < 0 ? Math.abs(engagementPercentage) : engagementPercentage}%
                      </span>
                   </div>
                 </div>
@@ -38,11 +38,11 @@ function SocialMediaOverviewToday() {
                   <img src={socialIcon} alt={`${social} icon`} />
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className={`text-2xl font-semibold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(230,17%,14%)]"}`}>{likesNumber}</span>
+                  <span className={`text-2xl font-bold transition-all duration-300 ease-in-out ${isDarkMode ? "text-[hsl(0,100%,100%)]" : "text-[hsl(230,17%,14%)]"}`}>{likesNumber}</span>
                   <div className="flex items-center gap-2">
                     <img src={likesPercentage < 0 ? downIcon : upIcon} alt="up or down icon" />
                     <span className={`font-semibold ${likesPercentage < 0 ? "text-[hsl(356,69%,56%)]" : "text-[hsl(163,72%,41%)]"}`}>
-                      {likesPercentage < 0 ? likesPercentage * - 1 : likesPercentage}%
+                      {likesPercentage < 0 ? Math.abs(likesPercentage) : likesPercentage}%
                     </span>
                   </div>
                 </div>

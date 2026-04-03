@@ -3,10 +3,17 @@ import { createContext, useContext, useState } from "react";
 export const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   const handleDarkModeToggle = () => {
-    setIsDarkMode((prev) => !prev);
+    setIsDarkMode(prev => {
+      localStorage.setItem("theme", !prev ? "dark" : "light");
+      return !prev
+    });
   };
 
   return (

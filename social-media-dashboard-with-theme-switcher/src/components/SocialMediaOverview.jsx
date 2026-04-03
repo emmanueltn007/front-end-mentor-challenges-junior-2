@@ -30,7 +30,7 @@ function SocialMediaOverview () {
                         </div>
                         <div className={`flex items-center gap-2 font-semibold ${followersGainedOrLostToday < 0 ? "text-[hsl(356,69%,56%)]" : "text-[hsl(163,72%,41%)]"}`}>
                             <img src={followersGainedOrLostToday < 0 ? downIcon : upIcon} alt="Up or down icon" />
-                            <span>{followersGainedOrLostToday < 0 ? followersGainedOrLostToday * - 1 : followersGainedOrLostToday}</span>
+                            <span>{followersGainedOrLostToday < 0 ? Math.abs(followersGainedOrLostToday) : followersGainedOrLostToday}</span>
                             <span>Today</span>
                         </div>
                     </div>
