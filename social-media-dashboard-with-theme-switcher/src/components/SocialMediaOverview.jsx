@@ -3,12 +3,10 @@ import { useTheme } from "../hooks/ThemeContext";
 
 function SocialMediaOverview () {
     const { isDarkMode } = useTheme();
-    
-    const colors = ["hsl(208,92%,53%)", "hsl(203, 89%, 53%)", "linear-gradient(45deg,hsl(37,97%,70%),hsl(5,77%,71%),hsl(329,70%,58%))", "hsl(348,97%,39%)"]
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-8 z-100">
-            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday }, index) => {
+            {data.map(({ social, socialIcon, userSocialHandle, noOfFollowers, followerType, upIcon, downIcon, followersGainedOrLostToday, boxColor }) => {
                 return (
                     <div
                         className={`
@@ -18,7 +16,7 @@ function SocialMediaOverview () {
                         {/* Color bar */}
                         <div
                             className="absolute top-0 left-0 h-1.5 w-full"
-                            style={{ background: colors[index] }}
+                            style={{ background: boxColor }}
                         />
                         <div className="flex gap-4">
                             <img src={socialIcon} alt={`${social} icon`} />

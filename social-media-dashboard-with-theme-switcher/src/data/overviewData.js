@@ -13,7 +13,7 @@ const overviewData = [
         percentageViews: 3,
         noOfLikes: 52,
         percentageLikes: 2,
-        backgroundColor: "bg-[hsl(208,92%,53%)]"
+        boxColor: "hsl(208,92%,53%)"
     },
     {
         social: "twitter",
@@ -29,7 +29,7 @@ const overviewData = [
         percentageViews: 303,
         noOfLikes: 507,
         percentageLikes: 553,
-        backgroundColor: "bg-[hsl(208,92%,53%)]"
+        boxColor: "hsl(203,89%,53%)"
     },{
         social: "instagram",
         socialIcon: "/images/icon-instagram.svg",
@@ -44,7 +44,7 @@ const overviewData = [
         percentageViews: 1375,
         noOfLikes: 5462,
         percentageLikes: 2257,
-        backgroundColor: "bg-[hsl(208,92%,53%)]"
+        boxColor: "linear-gradient(45deg,hsl(37,97%,70%),hsl(5,77%,71%),hsl(329,70%,58%))"
     },{
         social: "youtube",
         socialIcon: "/images/icon-youtube.svg",
@@ -59,7 +59,7 @@ const overviewData = [
         percentageViews: 12,
         noOfLikes: 107,
         percentageLikes: 19,
-        backgroundColor: "bg-[hsl(208,92%,53%)]"
+        boxColor: "hsl(348,97%,39%)"
     }
 ];
 
