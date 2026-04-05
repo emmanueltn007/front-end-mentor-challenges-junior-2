@@ -2,7 +2,7 @@ import GridContainer from "./components/GridContainer";
 
 function App () {
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-full">
       <GridContainer />
     </div>
   );
