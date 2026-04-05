@@ -2,7 +2,7 @@ import GridContainer from "./components/GridContainer";
 
 function App () {
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full font-['DM Sans',sans-serif]">
       <GridContainer />
     </div>
   );
