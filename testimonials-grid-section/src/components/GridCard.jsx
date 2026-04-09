@@ -2,10 +2,13 @@ import testimonials from "../utilities/testimonialsData";
 
 function GridCard() {
   return (
-    <div className="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
+    <div className="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 md:[grid-auto-rows:minmax(0,1fr)] gap-4">
       {testimonials.map((testimonial) => {
         return (
-          <div className={testimonial.gridStyle}>
+          <div 
+            key={testimonial.customer}
+            className={testimonial.gridStyle}
+          >
             <div className="flex items-center gap-4">
               <img
                 className="h-8 rounded-full border-2 border-[hsl(0,100%,100%)]"
