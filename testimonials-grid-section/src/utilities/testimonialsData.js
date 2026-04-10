@@ -7,9 +7,10 @@ const testimonials = [
     gridStyle: "md:min-h-0 md:overflow-y-auto md:col-span-2 row-span-2 md:row-span-1 md:col-start-1 row-end-3 md:row-start-1 bg-[hsl(263,55%,52%)] p-4 rounded-lg",
     avatarBorderColor: "border-[hsl(264,82%,80%)]",
     userNameColor: "text-[hsl(0,0%,81%)]",
-    graduateTextStyle: "text-[hsl(0,0%,81%)]",
+    status: "text-[hsl(0,0%,81%)]",
     headingStyle: "text-[hsl(214,17%,92%)]",
-    quoteStyle: "text-[hsl(0,0%,81%)]"
+    quoteStyle: "text-[hsl(0,0%,81%)]",
+    backgroundImage: "md:bg-[url('/images/bg-pattern-quotation.svg')] bg-[position:90%_0%] bg-no-repeat"
   },
   {
     customer: "Jonathan Walters",
@@ -19,7 +20,7 @@ const testimonials = [
     gridStyle: "md:min-h-0 md:overflow-y-auto row-span-1 md:row-span-1 col-span-1 md:col-start-3 row-end-4 md:row-start-1 bg-[hsl(217,19%,35%)] rounded-lg p-4",
     avatarBorderColor: "border-[hsl(224,10%,45%)]",
     userNameColor: "text-[hsl(0,0%,81%)]",
-    graduateTextStyle: "text-[hsl(0,0%,81%)]",
+    status: "text-[hsl(0,0%,81%)]",
     headingStyle: "text-[hsl(214,17%,92%)]",
     quoteStyle: "text-[hsl(0,0%,81%)]"
   },
@@ -31,7 +32,7 @@ const testimonials = [
     gridStyle: "md:min-h-0 md:overflow-y-auto col-span-1 row-span-1 md:row-span-2 md:col-start-4 row-end-5 md:row-start-1 bg-[hsl(0,0%,100%)] rounded-lg p-4",
     avatarBorderColor: "border-[hsl(0,100%,100%)]",
     userNameColor: "text-[hsl(217,19%,35%)]",
-    graduateTextStyle: "text-[hsl(217,19%,35%)]",
+    status: "text-[hsl(217,19%,35%)]",
     headingStyle: "text-[hsl(219,29%,14%)]",
     quoteStyle: "text-[hsl(217,19%,35%)]"
   },
@@ -43,7 +44,7 @@ const testimonials = [
     gridStyle: "md:min-h-0 md:overflow-y-auto row-span-2 md:row-span-1 md:col-span-1 md:col-start-1 row-end-7 md:row-start-2 bg-[hsl(0,0%,100%)] rounded-lg p-4",
     avatarBorderColor: "border-[hsl(0,100%,100%)]",
     userNameColor: "text-[hsl(217,19%,35%)]",
-    graduateTextStyle: "text-[hsl(217,19%,35%)]",
+    status: "text-[hsl(217,19%,35%)]",
     headingStyle: "text-[hsl(219,29%,14%)]",
     quoteStyle: "text-[hsl(217,19%,35%)]"
   },
@@ -55,7 +56,7 @@ const testimonials = [
     gridStyle: "md:min-h-0 md:overflow-y-auto md:col-span-2 md:row-span-1 md:col-start-2 row-end-9 md:row-start-2 bg-[hsl(219,29%,14%)] rounded-lg p-4",
     avatarBorderColor: "border-[hsl(263,55%,52%)]",
     userNameColor: "text-[hsl(0,0%,81%)]",
-    graduateTextStyle: "text-[hsl(0,0%,81%)]",
+    status: "text-[hsl(0,0%,81%)]",
     headingStyle: "text-[hsl(214,17%,92%)]",
     quoteStyle: "text-[hsl(0,0%,81%)]"
   }
