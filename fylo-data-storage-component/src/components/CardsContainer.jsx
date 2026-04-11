@@ -3,7 +3,7 @@ import StatsCard from "./StatsCard";
 
 function CardsContainer () {
   return (
-    <div>
+    <div className="flex flex-col md:flex-row gap-4">
       <FilesCard />
       <StatsCard />
     </div>
