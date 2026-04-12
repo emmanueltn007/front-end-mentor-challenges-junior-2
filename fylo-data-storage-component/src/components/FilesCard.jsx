@@ -12,7 +12,7 @@ function FilesCard () {
         {icons.map((icon, index) => {
           return (
             <div 
-              className="bg-[hsl(229,57%,11%)] flex p-2 h-8 w-8 m-auto rounded-md"
+              className="bg-[hsl(229,57%,11%)] flex p-2 h-8 w-8 rounded-md"
               key={`${icon.iconName}-${index}`} 
             >
               <img 
