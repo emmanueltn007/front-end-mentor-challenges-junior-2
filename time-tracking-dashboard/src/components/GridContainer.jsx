@@ -19,7 +19,7 @@ function GridContainer() {
 
   return (
     <div className="grid md:grid-cols-4 gap-4 w-full">
-      <div className="md:col-span-1 grid md:grid-rows-3 bg-[hsl(235,46%,20%)] rounded-2xl">
+      <div className="md:col-span-1 md:grid md:grid-row-3 bg-[hsl(235,46%,20%)] rounded-2xl">
         <div className="md:row-span-2">
           <ProfileCard />
         </div>

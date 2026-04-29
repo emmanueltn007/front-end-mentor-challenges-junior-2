@@ -13,7 +13,7 @@ function ActivityCard({ data, timeframe }) {
         return (
           <div
             key={activity.title}
-            className={`grid grid-rows-5 ${activity.backgroundColor} overflow-hidden rounded-2xl`}
+            className={`grid grid-rows-5 ${activity.backgroundColor} overflow-hidden rounded-2xl cursor-pointer hover:brightness-125 transition-all duration-300 ease-in-out`}
           >
             <div className="row-span-1 relative">
               <img
@@ -22,11 +22,11 @@ function ActivityCard({ data, timeframe }) {
                 alt={`${activity.title} top bar`}
               />
             </div>
-            <div className="bg-[hsl(235,46%,20%)] text-[hsl(0,100%,100%)] flex flex-col gap-2 p-4 rounded-t-2xl row-span-4 z-50">
+            <div className="bg-[hsl(235,46%,20%)] text-[hsl(0,100%,100%)] flex flex-col gap-2 p-4 rounded-2xl row-span-4 z-50">
               <div className="flex justify-between items-center">
                 <span className="font-semibold text-sm">{activity.title}</span>
                 <svg
-                  className="fill-white w-8 cursor-pointer"
+                  className="fill-[hsl(236,100%,87%)] hover:fill-[hsl(0,100%,100%)] transition-all duration-150 ease-in-out w-8 cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                 >
@@ -36,7 +36,7 @@ function ActivityCard({ data, timeframe }) {
 
               <h1 className="text-4xl">{current}hrs</h1>
 
-              <p className="text-sm">
+              <p className="text-sm text-[hsl(236,100%,87%)]">
                 {label}- {previous}hrs
               </p>
             </div>

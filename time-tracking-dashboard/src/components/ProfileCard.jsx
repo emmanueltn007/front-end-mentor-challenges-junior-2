@@ -1,6 +1,6 @@
 function ProfileCard() {
   return (
-    <div className="flex md:flex-col gap-4 bg-[hsl(246,80%,60%)] rounded-2xl p-4">
+    <div className="flex md:flex-col gap-4 md:gap-8 bg-[hsl(246,80%,60%)] rounded-2xl md:px-4 md:pt-4 md:pb-12 max-md:p-4">
       <img
         className="h-16 w-16 border border-[hsl(0,100%,100%)] rounded-full"
         src="/images/image-jeremy.png"
