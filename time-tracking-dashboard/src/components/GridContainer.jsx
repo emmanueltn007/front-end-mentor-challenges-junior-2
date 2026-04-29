@@ -10,7 +10,7 @@ function GridContainer() {
   const [timeframe, setTimeframe] = useState("weekly");
 
   useEffect(() => {
-    fetch("/src/data/data.json")
+    fetch("/data/data.json")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
